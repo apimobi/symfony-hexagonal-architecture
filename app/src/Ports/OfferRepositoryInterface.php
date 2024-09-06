@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain;
+namespace App\Ports;
 
 use App\Domain\Offer;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;

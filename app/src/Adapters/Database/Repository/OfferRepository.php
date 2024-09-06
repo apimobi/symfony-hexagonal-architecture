@@ -4,7 +4,7 @@ namespace App\Adapters\Database\Repository;
 
 use App\Domain\Offer;
 use App\Adapters\Database\Entity\Offer as OfferEntity;
-use App\Domain\OfferRepositoryInterface;
+use App\Ports\OfferRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;

@@ -1,6 +1,6 @@
 <?php
 // src/Controller/LuckyController.php
-namespace App\Api\Controller;
+namespace App\Adapters\Api\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

@@ -2,6 +2,8 @@
 
 namespace App\Domain;
 
+use App\Ports\OfferRepositoryInterface;
+
 class Actions
 {
 
