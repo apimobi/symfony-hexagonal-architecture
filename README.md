@@ -1,21 +1,31 @@
-# Symfony Hexagonal architecture
+# Symfony Hexahonal Architecture Example
 
-```
-docker compose build
-```
+Little implementation of Hexagonal Architecture with Symfony to build a "quick" API Rest
+## Tech Stack
 
-```
-docker compose up
-```
+**Client:**  
+As you wish Reactjs, VueJs, NextJs
 
-```
-docker compose exec php bash
-```
-
-```
-composer install
-```
+**Server:**  
+php  
+Symfony  
+Nginx  
+Postgresql
 
 
-Based on very nice source :  
-[Blog OCTO](https://blog.octo.com/architecture-hexagonale-trois-principes-et-un-exemple-dimplementation)
+## Installation
+
+Install the project with docker compose
+
+```bash
+  docker compose build
+  docker compose up
+  docker compose exec php bash
+  composer install
+```
+    
+## References
+
+Awsome source
+
+[OCTO Blog](https://github.com/matiassingers/awesome-readme)
