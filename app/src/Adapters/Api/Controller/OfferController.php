@@ -8,18 +8,18 @@ use Symfony\Component\Routing\Attribute\Route;
 use App\Adapters\Database\Repository\OfferRepository;
 use App\Domain\Actions;
 use Symfony\Component\Serializer\SerializerInterface;
+use App\Adapters\Api\Adapter\ApiAdapter;
 
 
 class OfferController extends AbstractController
 {
 
     #[Route('/offers/{id}', name:'get_offer', requirements: ['id' => '\d+'])]
-    public function getOffer(int $id, OfferRepository $offerRepository, SerializerInterface $serializer): Response
+    public function getOffer(int $id, OfferRepository $offerRepository, ApiAdapter $apiAdapter): Response
     {
         $actions = new Actions($offerRepository);
         $offer = $actions->getOffer($id);
-
-        $data = $serializer->serialize($offer, 'json');
+        $data = $apiAdapter->getOffer($offer);
 
         $response = new Response(
             $data,
@@ -35,7 +35,6 @@ class OfferController extends AbstractController
     {
         $actions = new Actions($offerRepository);
         $offers = $actions->getOffers();
-
         $data = $serializer->serialize($offers, 'json');
 
         $response = new Response(
