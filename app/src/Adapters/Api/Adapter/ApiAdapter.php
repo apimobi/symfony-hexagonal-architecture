@@ -8,6 +8,8 @@ use App\Adapters\Api\Adapter\DTOffer;
 
 class ApiAdapter
 {
+    private SerializerInterface $serializer;
+    
     public function __construct(SerializerInterface $serializer)
     {
         $this->serializer = $serializer;

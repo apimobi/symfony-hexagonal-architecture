@@ -8,6 +8,11 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 class DTOffer
 {
+    private int $id;
+    private string $title;
+    private string $content;
+    private ?DateTimeInterface $publishedAt;
+
 
     /**
      * Post constructor.
